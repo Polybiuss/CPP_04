@@ -1,11 +1,9 @@
-NAME = animal
+NAME = brain
 
 SRC = main.cpp	\
 	Animal.cpp	\
-	Dog.cpp		\
-	Cat.cpp		\
-	WrongAnimal.cpp	\
-	WrongCat.cpp	\
+	Cat.cpp	\
+	Dog.cpp	\
 
 OBJ = $(SRC:.cpp=.o)
 
