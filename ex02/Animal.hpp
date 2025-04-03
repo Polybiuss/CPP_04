@@ -14,7 +14,7 @@ class Animal{
 		std::string getType(void)const;
 		void	setType(std::string type);
 		Animal& operator=(Animal const & beast);
-		virtual void	makeSound(void)const;
+		virtual void	makeSound(void)const = 0;
 	protected :
 		std::string p_Type;
 };

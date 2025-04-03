@@ -14,7 +14,7 @@ Animal::Animal(Animal const & beast){
 }
 
 Animal::~Animal(void){
-	std::cout << "Default destrcutor called" << std::endl;
+	std::cout << "Default destrcutot called" << std::endl;
 }
 
 std::string	Animal::getType(void)const {
