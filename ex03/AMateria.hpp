@@ -19,7 +19,7 @@ class AMateria{
 
 		AMateria& operator=(AMateria const & meteria);
 		virtual AMateria* clone(void) const = 0;
-		virtual void use(ICharacter& target);
+		// virtual void use(ICharacter& target);
 };
 
 #endif
