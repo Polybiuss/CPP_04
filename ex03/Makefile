@@ -1,6 +1,12 @@
 NAME = materia
 
 SRC = main.cpp	\
+	AMateria.cpp	\
+	ICharacter.cpp	\
+	Character.cpp	\
+	Cure.cpp	\
+	Ice.cpp	\
+	MateriaSource.cpp	\
 
 OBJ = $(SRC:.cpp=.o)
 

@@ -21,3 +21,7 @@ Cure& Cure::operator=(Cure const & heal){
 Cure* Cure::clone(void)const {
 	return new Cure();
 }
+
+void	Cure::use(ICharacter& target){
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}

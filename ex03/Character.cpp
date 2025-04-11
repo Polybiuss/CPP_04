@@ -1,4 +1,5 @@
 #include "Character.hpp"
+#include "AMateria.hpp"
 
 Character::Character(void){
 	std::cout << "Default Character constructor called" << std::endl;
@@ -51,7 +52,7 @@ void	Character::equip(AMateria* m){
 		}
 		++i;
 	}
-	if (i = 4)
+	if (i == 4)
 		std::cout << "Your bag is full!" << std::endl;
 	else
 		std::cout << "Your AMateria is equipped a the " << i << " th positions" << std::endl;
@@ -70,5 +71,10 @@ void	Character::unequip(int idx){
 }
 
 void	Character::use(int idx, ICharacter& target){
-	
+	if (idx > 3 || idx < 0)
+		std::cout << "Your bag only contains 4 emplacement between 0 and 3 included" << std::endl;
+	else if (!this->_bag[idx])
+		std::cout << "This emplacement is empty" << std::endl;
+	else
+		this->_bag[idx]->use(target);
 }

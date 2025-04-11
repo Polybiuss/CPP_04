@@ -8,11 +8,6 @@ AMateria::AMateria(std::string const & type): type(type){
 	std::cout << "String AMateria constructor called" << std::endl;
 }
 
-AMateria::AMateria(AMateria const & materia){
-	std::cout << "Copy AMateria constructor called" << std::endl;
-	*this = materia;
-}
-
 AMateria::~AMateria(void){
 	std::cout << "Default AMateria desctructor called" << std::endl;
 }
@@ -30,7 +25,6 @@ void AMateria::setType(std::string const & type){
 	this->type = type;
 }
 
-AMateria* AMateria::clone(void)const{
-	std::cout << "not allowed functions in class AMateria" << std::endl;
-	return NULL;
+void AMateria::use(ICharacter& target){
+	std::cout << "you can't use pure AMateria on " << target.getName() << std::endl;
 }

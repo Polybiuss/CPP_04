@@ -11,11 +11,11 @@ class Character: public ICharacter{
 		~Character(void);
 		
 		std::string const & getName(void)const;
-		void	setName(std::string name);
+		void setName(std::string name);
 
-		void	equip(AMateria* m);
-		void	unequip(int idx);
-		void	use(int idx, ICharacter& target);
+		void equip(AMateria* ma);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
 
 		private :
 			std::string _name;
