@@ -6,7 +6,7 @@ WrongCat::WrongCat(void): WrongAnimal("WrongCat"){
 
 WrongCat::WrongCat(WrongCat const & wc){
 	std::cout << "Copy WrongCat constructor called" << std::endl;
-	*this = wc;
+	this->p_type = wc.p_type;
 }
 
 WrongCat::~WrongCat(void){
@@ -14,7 +14,7 @@ WrongCat::~WrongCat(void){
 }
 
 WrongCat& WrongCat::operator=(WrongCat const & wc){
-	this->setType(wc.getType());
+	this->p_type = wc.p_type;
 	return *this;
 }
 

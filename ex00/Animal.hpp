@@ -9,7 +9,7 @@ class Animal{
 		Animal(void);
 		Animal(std::string type);
 		Animal(Animal const & beast);
-		~Animal(void);
+		virtual ~Animal(void);
 	
 		std::string getType(void)const;
 		void	setType(std::string type);

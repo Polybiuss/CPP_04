@@ -1,6 +1,6 @@
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal(void){
+WrongAnimal::WrongAnimal(void): p_type("default_wrong animal"){
 	std::cout << "Default WrongAnimal constructor called" << std::endl;
 }
 
@@ -10,7 +10,7 @@ WrongAnimal::WrongAnimal(std::string type): p_type(type){
 
 WrongAnimal::WrongAnimal(WrongAnimal const & wa){
 	std::cout << "Copy WrongAnimal constructor called" << std::endl;
-	*this = wa;
+	this->p_type = wa.p_type;
 }
 
 WrongAnimal::~WrongAnimal(void){
@@ -26,7 +26,7 @@ std::string WrongAnimal::getType(void)const {
 }
 
 WrongAnimal& WrongAnimal::operator=(WrongAnimal const & wa){
-	this->p_type = wa.getType();
+	this->p_type = wa.p_type;
 	return *this;
 }
 

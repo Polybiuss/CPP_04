@@ -7,7 +7,7 @@ Cat::Cat(void): Animal("Cat"){
 
 Cat::Cat(Cat const & kitten){
 	std::cout << "Copy Cat constructor called" << std::endl;
-	*this = kitten;
+	this->p_Type = p_Type;
 	this->_brain = new Brain(*kitten._brain);
 }
 
@@ -17,7 +17,8 @@ Cat::~Cat(void){
 }
 
 Cat&	Cat::operator=(Cat const & kitten){
-	this->setType(kitten.getType());
+	for (int i = 0; i < 100; i++)
+		this->_brain[i] = kitten._brain[i];
 	return *this;
 }
 

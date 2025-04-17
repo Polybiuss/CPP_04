@@ -1,6 +1,6 @@
 #include "Animal.hpp"
 
-Animal::Animal(void){
+Animal::Animal(void): p_Type("default_animal"){
 	std::cout << "Default Animal constructor called" << std::endl;
 }
 
@@ -10,7 +10,7 @@ Animal::Animal(std::string type): p_Type(type){
 
 Animal::Animal(Animal const & beast){
 	std::cout << "Copy Animal constructor called" << std::endl;
-	*this = beast;
+	this->p_Type = beast.p_Type;
 }
 
 Animal::~Animal(void){
@@ -26,7 +26,7 @@ void	Animal::setType(std::string type){
 }
 
 Animal& Animal::operator=(Animal const & beast){
-	p_Type = beast.getType();
+	p_Type = beast.p_Type;
 	return *this;
 }
 

@@ -4,9 +4,9 @@ Ice::Ice(void): AMateria("Ice"){
 	std::cout << "Default Ice constrcutor" << std::endl;
 }
 
-Ice::Ice(Ice const & cold){
+Ice::Ice(Ice const & cold): AMateria("Ice"){
+	(void)cold;
 	std::cout << "Copy Ice constrcutor" << std::endl;
-	*this = cold;
 }
 
 Ice::~Ice(void){
@@ -14,7 +14,7 @@ Ice::~Ice(void){
 }
 
 Ice& Ice::operator=(Ice const & cold){
-	this->setType(cold.getType());
+	(void)cold;
 	return *this;
 }
 

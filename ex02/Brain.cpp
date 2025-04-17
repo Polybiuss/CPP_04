@@ -6,7 +6,8 @@ Brain::Brain(void){
 
 Brain::Brain(Brain const & br){
 	std::cout << "Copy Brain constructor called" << std::endl;
-	*this = br;
+	for (int i = 0; i < 100; i++)
+		this->_ideas[i] = br._ideas[i];
 }
 
 Brain::~Brain(void){

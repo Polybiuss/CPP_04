@@ -16,6 +16,7 @@ class Character: public ICharacter{
 		void equip(AMateria* ma);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
+		Character& operator=(Character const & pl);
 
 		private :
 			std::string _name;

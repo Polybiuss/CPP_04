@@ -15,7 +15,6 @@ Character::Character(std::string name): _name(name){
 
 Character::Character(Character const & pl){
 	std::cout << "Copy Character constrcutor called" << std::endl;
-	*this = pl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (pl._bag[i])
@@ -23,7 +22,19 @@ Character::Character(Character const & pl){
 		else
 			this->_bag[i] = NULL;
 	}
-	
+	this->_name = pl._name;
+}
+
+Character& Character::operator=(Character const & pl){
+		for (int i = 0; i < 4; i++)
+	{
+		if (pl._bag[i])
+			this->_bag[i] = pl._bag[i]->clone();
+		else
+			this->_bag[i] = NULL;
+	}
+	this->_name = pl._name;
+	return *this;
 }
 
 Character::~Character(void){

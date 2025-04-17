@@ -7,7 +7,6 @@ Dog::Dog(void): Animal("Dog"){
 
 Dog::Dog(Dog const & goodBoy){
 	std::cout << "Copy Dog constrcutor called" << std::endl;
-	*this = goodBoy;
 	this->_brain = new Brain(*goodBoy._brain);
 }
 
@@ -17,7 +16,8 @@ Dog::~Dog(void){
 }
 
 Dog& Dog::operator=(Dog const & goodBoy){
-	this->setType(goodBoy.getType());
+	for (int i = 0; i < 100; i++)
+		this->_brain[i] = goodBoy._brain[i];
 	return *this;
 }
 

@@ -19,5 +19,10 @@ int main(void){
 	wa->makeSound();
 	wc->makeSound();
 	meta->makeSound();
+	delete meta;
+	delete j;
+	delete i;
+	delete wa;
+	delete wc;
 	return (0);
 }

@@ -14,7 +14,6 @@ MateriaSource::MateriaSource(MateriaSource const & ims){
 		else
 			this->_content[i] = ims._content[i]->clone();
 	}
-	*this = ims;
 	std::cout << "Copy MateriaSource constructor called" << std::endl;
 }
 

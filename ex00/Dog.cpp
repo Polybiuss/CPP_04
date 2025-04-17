@@ -6,7 +6,7 @@ Dog::Dog(void): Animal("Dog"){
 
 Dog::Dog(Dog const & goodBoy){
 	std::cout << "Copy Dog constrcutor called" << std::endl;
-	*this = goodBoy;
+	this->p_Type = goodBoy.p_Type;
 }
 
 Dog::~Dog(void){
@@ -14,7 +14,7 @@ Dog::~Dog(void){
 }
 
 Dog& Dog::operator=(Dog const & goodBoy){
-	this->setType(goodBoy.getType());
+	this->p_Type = goodBoy.p_Type;
 	return *this;
 }
 

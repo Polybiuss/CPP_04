@@ -4,9 +4,9 @@ Cure::Cure(void): AMateria("Cure"){
 	std::cout << "Default Cure constrcutor called" << std::endl;
 }
 
-Cure::Cure(Cure const & heal){
+Cure::Cure(Cure const & heal): AMateria("Cure"){
+	(void)heal;
 	std::cout << "Copy Cure constrcutor called" << std::endl;
-	*this = heal;
 }
 
 Cure::~Cure(void){
@@ -14,7 +14,7 @@ Cure::~Cure(void){
 }
 
 Cure& Cure::operator=(Cure const & heal){
-	this->setType(heal.getType());
+	(void)heal;
 	return *this;
 }
 

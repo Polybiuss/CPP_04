@@ -14,7 +14,7 @@ class WrongAnimal{
 		void	setType(std::string type);
 		std::string	getType(void) const;
 		WrongAnimal&	operator=(WrongAnimal const & wa);
-		virtual void	makeSound(void) const;
+		void	makeSound(void) const;
 	
 	protected :
 		std::string p_type;

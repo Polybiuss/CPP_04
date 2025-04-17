@@ -3,6 +3,6 @@
 #include "Cat.hpp"
 
 int main(void){
-	Animal test;
+	Cat	te;
 	return (0);
 }
